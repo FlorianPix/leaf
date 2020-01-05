@@ -15,7 +15,7 @@ float percent = 1.001;
 void setup(){
   size(640,640);
   counter = 0;
-  record = false;
+  record = true;
   use_testPathFile = true;
   leaf = read_leaf_outline();
   veinTree = new VeinTree(new PVector(width/2, 4 * height / 5));
