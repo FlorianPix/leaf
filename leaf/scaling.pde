@@ -16,7 +16,7 @@ ArrayList<PVector> scale_leaf(float percent){
     sum_x+=v.x;
   }
   float dev_x = width/2 - (sum_x/leaf.size());
-  float dev_y = 4 * height / 5 - highY(scaled);
+  float dev_y = 4 * height / 5 - firstY(scaled);
   
   ArrayList<PVector> shifted = new ArrayList();
   for (PVector v: scaled){
@@ -27,12 +27,6 @@ ArrayList<PVector> scale_leaf(float percent){
   return shifted;
 }
 
-float highY(ArrayList<PVector> list){
-  float highY = 0;
-  for (PVector v : list){
-    if (v.y > highY){
-      highY = v.y;
-    }
-  }
-  return highY;
+float firstY(ArrayList<PVector> list){
+  return list.get(0).y;
 }
